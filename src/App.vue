@@ -1,18 +1,21 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app">
+        <div class="alert alert-danger" v-if="error">
+            {{ error.message }}
+            <button class="btn btn-link" @click="setError(null)">OK</button>
+        </div>
+        <RouterView v-else />
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { mapMutations, mapState } from 'vuex';
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+    name: 'app',
+    errorCaptured(err) { this.setError(err); },
+    computed: mapState([ 'error' ]),
+    methods: mapMutations([ 'setError' ])
 }
 </script>
 
@@ -24,5 +27,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  margin-bottom: 60px;
 }
 </style>
