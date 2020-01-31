@@ -111,7 +111,8 @@ export default {
                     const _a = fieldaccessor[this.sortbyfield](a);
                     const _b = fieldaccessor[this.sortbyfield](b);
 
-                    return this.sortorder === "asc" ? _b < _a : _a < _b;
+                    const res = this.sortorder === "asc" ? _b < _a : _a < _b;
+                    return res ? 1 : -1;
                 });
         }
     },
