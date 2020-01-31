@@ -1,4 +1,6 @@
-# vue-phonebook
+Live demo can be found [here](https://scalene.me/showcase/vue-phonebook/).
+
+---
 
 ## Project setup
 ```
