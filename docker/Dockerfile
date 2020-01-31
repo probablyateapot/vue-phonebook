@@ -1,7 +1,7 @@
 
 FROM node:12-alpine AS builder
 
-ARG GIT_REPO_URL=https://github.com/probablyateapot/react-table
+ARG GIT_REPO_URL=https://github.com/probablyateapot/vue-phonebook
 ARG GIT_REPO_REF=master
 
 RUN apk add --no-cache git
