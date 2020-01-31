@@ -3,7 +3,8 @@ const {
     VUE_APP_DATA_URL = 'https://randomuser.me/api/?inc=name,email,login,dob,phone,picture&format=json&results=500',
     VUE_APP_REQUEST_TIMEOUT = '10000',
     VUE_APP_BUILD_DESCRIBE,
-    VUE_APP_REPO_URL
+    VUE_APP_REPO_URL,
+    VUE_APP_BASE_URL
 } = process.env;
 
 export const dataUrl = VUE_APP_DATA_URL;
@@ -11,6 +12,8 @@ export const requestTimeout = parseInt(VUE_APP_REQUEST_TIMEOUT);
 
 export const repoUrl = VUE_APP_REPO_URL;
 export const buildDesc = VUE_APP_BUILD_DESCRIBE;
+
+export const baseUrl = VUE_APP_BASE_URL;
 
 export const dateOpts = {
     year: 'numeric',

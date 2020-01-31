@@ -11,6 +11,8 @@ import NotFound from './pages/404';
 
 import store from './store';
 
+import { baseUrl } from './config';
+
 const getByUsername = store.getters["contacts/getByUsername"];
 
 const userGuard = (to, from, next) => {
@@ -24,6 +26,7 @@ const userGuard = (to, from, next) => {
 };
 
 export default new VueRouter({
+    base: baseUrl,
     routes: [
         {
             path: '/',
