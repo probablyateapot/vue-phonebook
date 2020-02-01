@@ -7,7 +7,7 @@
         <RouterView v-else />
         <div class="navbar fixed-bottom">
             <div class="ml-auto mr-2 mb-2 text-center">
-                <a v-if="repoUrl" href="repoUrl">
+                <a v-if="repoUrl" :href="repoUrl">
                     <img width="60" height="60" src="./assets/github.png" />
                 </a>
                 <small v-if="buildDesc" class="d-block text-muted mt-1">{{ buildDesc }}</small>
